@@ -38,7 +38,7 @@ public class ProcurementSchedulerJob extends Job {
                     if (bookRequest.getOrder_book_isbns().size() != 0){
                             System.out.println("HTTP POST to Publisher");
                         Client client = Client.create();
-                        String url = "http://54.215.210.214:9000/orders";        
+                        String url = "http://54.219.156.168:9000/orders";        
                             WebResource webResource = client.resource(url);
                             ClientResponse response = webResource.accept("application/json")
                                             .type("application/json").entity(bookRequest, "application/json").post(ClientResponse.class);
@@ -55,7 +55,7 @@ public class ProcurementSchedulerJob extends Job {
             try {
                     
                     Client client = Client.create();
-                    String url = "http://54.215.210.214:9000/orders/73186";        
+                    String url = "http://54.219.156.168:9000/orders/78594";        
                     WebResource webResource = client.resource(url);
                     ShippedBook response = webResource.accept("application/json")
                                     .type("application/json").get(ShippedBook.class);
